@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Valleys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @valleys.each do |valley| %>
+      <tr>
+        <td><%= valley.name %></td>
+        <td><%= link_to 'Show', valley %></td>
+        <td><%= link_to 'Edit', edit_valley_path(valley) %></td>
+        <td><%= link_to 'Destroy', valley, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Valley', new_valley_path %>

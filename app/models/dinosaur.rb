@@ -5,6 +5,8 @@ class Dinosaur < ApplicationRecord
   validates :age, length: { maximum: 5 }, allow_blank: true
   validates :image_url, length: { maximum: 255 }, allow_blank: true
 
+  belongs_to :valley
+
   def self.order_by_name
     order(:name)
   end
