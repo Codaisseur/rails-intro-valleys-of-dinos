@@ -2,3 +2,7 @@
 
 <p>Age: <%= @dinosaur.age %></p>
 <%= image_tag @dinosaur.image_url %>
+
+<hr>
+
+<%= link_to "[Edit]", edit_dinosaur_path(@dinosaur.id) %>

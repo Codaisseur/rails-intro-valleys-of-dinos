@@ -22,4 +22,8 @@ class DinosaursController < ApplicationController
        render 'new'
     end
   end
+
+  def edit
+    @dinosaur = Dinosaur.find(params[:id])
+   end
 end

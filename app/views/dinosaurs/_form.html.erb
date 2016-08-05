@@ -1,0 +1,14 @@
+<%= form_for @dinosaur do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit (@dinosaur.new_record? ? "Create" : "Update") %>
+
+<% end %>
