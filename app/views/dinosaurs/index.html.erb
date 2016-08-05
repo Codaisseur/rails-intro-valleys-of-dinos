@@ -3,3 +3,7 @@
 <% @dinosaurs.each do |dinosaur| %>
   <p><%= link_to dinosaur.name, dinosaur %></p>
 <% end %>
+
+<hr>
+
+<%= link_to "[New Dinosaur]", new_dinosaur_path %>
