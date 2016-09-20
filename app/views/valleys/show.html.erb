@@ -5,5 +5,17 @@
   <%= @valley.name %>
 </p>
 
+<h4>List of Dinos</h4>
+
+<% if @valley.dinosaurs.any? %>
+  <ul>
+    <% @valley.dinosaurs.each do |dino| %>
+      <li><%= dino.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no dinos in this valley.</p>
+<% end %>
+
 <%= link_to 'Edit', edit_valley_path(@valley) %> |
 <%= link_to 'Back', valleys_path %>

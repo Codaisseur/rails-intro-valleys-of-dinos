@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :valleys
-  root "dinosaurs#index"
+  root "valleys#index"
 
   resources :dinosaurs
   # get "dinosaurs" => "dinosaurs#index"
