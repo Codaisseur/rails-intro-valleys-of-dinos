@@ -15,6 +15,9 @@
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
 
+  <%= f.label :valley_id %>
+  <%= f.collection_select(:valley_id, Valley.all, :id, :name) %>
+
   <%= f.submit (@dinosaur.new_record? ? "Create" : "Update") %>
 
 <% end %>
